@@ -1,0 +1,78 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="tr">
+<th:block th:fragment="content">
+
+	<div class="col-lg-4 col-lg-offset-4 ">
+		<form action="#" th:action="@{/purchasingForm}"
+			th:object="${purchasingForm}" method="post" acceptcharset="UTF-8">
+			<div class="form-group">
+				<p>
+					<b>Bölüm Adı:</b><input type="text" class="form-control"
+						placeholder="Bölüm Adı" th:field="*{DepartmentName}"
+						th:value="*{DepartmentName}" />
+				</p>
+
+				<p>
+					<b>Tarih:</b><input type="date" class="form-control"
+						placeholder="Date" th:field="*{Date}" th:value="*{Date}" />
+				</p>
+				<p>
+					<b>Stok Sayısı:</b><input type="number" class="form-control"
+						placeholder="Stok Sayısı" th:field="*{AmountOfStock}"
+						th:value="*{AmountOfStock}" />
+				</p>
+
+				<p>
+					<b>İstenilen Tarih:</b><input type="date" class="form-control"
+						placeholder="İstenilen Tarih" th:field="*{DateRequested}"
+						th:value="*{DateRequested}" />
+				</p>
+				<p>
+					<b>Genel Açıklama:</b><input type="text" class="form-control"
+						placeholder="Genel Açıklama" th:field="*{GeneralExplanation}"
+						th:value="*{GeneralExplanation}" />
+				</p>
+				<p>
+					<b>İstek Sebebinin Açıklanması:</b><input type="text"
+						class="form-control" placeholder="İstek Sebebinin Açıklanması"
+						th:field="*{ExplanationOfRequestedReason}"
+						th:value="*{ExplanationOfRequestedReason}" />
+				</p>
+				<p>
+					<b>İstenilen Ürünün Tanım:</b><input type="text"
+						class="form-control" placeholder="İstenilen Ürünün Tanımı"
+						th:field="*{RequestedProductDefinition}"
+						th:value="*{RequestedProductDefinition}" />
+				</p>
+				<p>
+					<b>Verilen Sipariş Miktarı:</b><input type="text"
+						class="form-control" placeholder="Verilen Sipariş Miktarı"
+						th:field="*{AmountOfOrder}" th:value="*{AmountOfOrder}" />
+				</p>
+				<p>
+					<b>İhale No:</b><input type="text" class="form-control"
+						placeholder="İhale No" th:field="*{TenderCode}"
+						th:value="*{TenderCode}" />
+				</p>
+
+				<p>
+					<b>İsteği Yapan:</b><input type="text" class="form-control"
+						placeholder="İsteği Yapan" th:field="*{Requestor}"
+						th:value="*{Requestor}" />
+				</p>
+
+				<p>
+					<b>Bölüm Sorumlusu Onayı:</b><input type="text"
+						class="form-control" placeholder="Bölüm Sorumlusu Onayı"
+						th:field="*{DepartmentHeadApproval}"
+						th:value="*{DepartmentHeadApproval}" />
+				</p>
+
+				<p>
+					<input type="submit" class="btn btn-primary" value="Submit" /> <input
+						type="reset" class="btn btn-primary" value="Reset" />
+				</p>
+			</div>
+		</form>
+	</div>
+
+</th:block>

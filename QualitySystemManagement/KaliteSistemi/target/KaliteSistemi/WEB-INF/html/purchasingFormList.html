@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="tr">
+<meta charset="utf-8">
+<div th:fragment="content">
+	<div class="container">
+		<div class="text-center">
+			<h1>Satın Alma Formları</h1>
+		</div>
+		<br>
+		<table class="table table-hover">
+			<thead>
+				<th>İstek No</th>
+				<th>Bölüm Adı</th>
+				<th>Tarih</th>
+				<th>İhale No</th>
+				
+			</thead>
+			<tbody>
+				<tr th:each="purchasingForm : ${purchasingFormList}">
+					<td th:text="${purchasingForm.RequestNo}"></td>
+					<td th:text="${purchasingForm.DepartmentName}"></td>
+					<td th:text="${purchasingForm.Date}"></td>
+					<td th:text="${purchasingForm.TenderCode}"></td>
+				
+					<td>
+						<a th:href="@{/purchasingForm/update/__${purchasingForm.id}__}" class="btn btn-primary">Edit</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</html>

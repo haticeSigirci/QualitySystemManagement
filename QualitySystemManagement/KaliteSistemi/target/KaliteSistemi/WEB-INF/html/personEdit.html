@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="tr">
+<meta charset="utf-8">
+<th:block th:fragment="content">
+	<div class="form-group">
+		<form action="#" th:action="@{/person/update/__*{id}__}"
+			th:object="${person}" method="post" acceptcharset="UTF-8">
+			<div class="col-md-3">
+				<p>
+					<input type="hidden" class="form-control" placeholder="Name"
+						th:field="*{id}" th:value="*{id}" />
+				</p>
+				<p>
+					<b>Name:</b><input type="text" class="form-control"
+						placeholder="Name" th:field="*{name}" th:value="*{name}" />
+				</p>
+				<p>
+					<b>Surname:</b><input type="text" class="form-control"
+						placeholder="Surname" th:field="*{surname}" th:value="*{surname}" />
+				</p>
+				<p>
+					<b>Age:</b><input type="number" class="form-control"
+						placeholder="Age" th:field="*{age}"
+						th:value="*{age}" />
+				</p>
+				
+				<input type="submit" class="btn btn-primary" value="Submit" /> <input
+					type="reset" class="btn btn-primary" value="Reset" />
+			</div>
+		</form>
+	</div>
+	</th>
+</html>

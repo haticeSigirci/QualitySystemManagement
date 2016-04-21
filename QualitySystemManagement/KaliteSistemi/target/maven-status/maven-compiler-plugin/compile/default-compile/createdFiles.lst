@@ -1,0 +1,17 @@
+tr/org/biotek/controller/PurchasingFormController.class
+tr/org/biotek/controller/TestController.class
+tr/org/biotek/config/Layout.class
+tr/org/biotek/dao/PersonDao.class
+tr/org/biotek/config/ThymeleafLayoutInterceptor.class
+tr/org/biotek/controller/PersonController.class
+tr/org/biotek/service/PurchasingFormServiceImpl.class
+tr/org/biotek/model/Person.class
+tr/org/biotek/dao/PurchasingFormDao.class
+tr/org/biotek/model/PurchasingForm.class
+tr/org/biotek/service/PurchasingFormService.class
+tr/org/biotek/config/WebConfig.class
+tr/org/biotek/config/WebAppInitializer.class
+tr/org/biotek/service/PersonService.class
+tr/org/biotek/dao/PersonDaoImpl.class
+tr/org/biotek/dao/PurchasingFormDaoImpl.class
+tr/org/biotek/service/PersonServiceImpl.class

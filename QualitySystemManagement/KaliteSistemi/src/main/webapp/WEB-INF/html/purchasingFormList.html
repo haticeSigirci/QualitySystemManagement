@@ -1,0 +1,47 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="tr">
+<meta charset="utf-8">
+<div th:fragment="content">
+	<div class="container">
+		<div class="text-center">
+			<h1>Satın Alma Formları</h1>
+		</div>
+		<br>
+		<table class="table table-hover">
+			<thead>
+				<th>İstek No</th>
+				<th>Bölüm Adı</th>
+				<th>Tarih</th>
+				<th>İsteği Yapan</th>
+				<th>İhale No</th>
+				
+				<th>İstenilen Ürünün Tanımı</th>
+				<th>İstenilen Miktar</th>
+				<th>İstenilen Tarih</th>
+				<th>Stok Sayısı</th>
+				<th>İstenin Sebebinin Açıklanması</th>
+				<th>Verilen Sipariş Miktarı</th>
+				
+			</thead>
+			<tbody>
+				<tr th:each="purchasingForm : ${purchasingFormList}">
+					<td th:text="${purchasingForm.RequestNo}"></td>
+					<td th:text="${purchasingForm.DepartmentName}"></td>
+					<td th:text="${purchasingForm.Date}"></td>
+					<td th:text="${purchasingForm.Requestor}"></td>
+					<td th:text="${purchasingForm.TenderCode}"></td>
+					<td th:text="${purchasingForm.RequestedProductDefinition}"></td>
+					<td th:text="${purchasingForm.QuantityRequested}"></td>
+					<td th:text="${purchasingForm.DateRequested}"></td>
+					<td th:text="${purchasingForm.AmountOfStock}"></td>
+					<td th:text="${purchasingForm.ExplanationOfRequestedReason}"></td>
+					<td th:text="${purchasingForm.AmountOfOrder}"></td>
+				
+					<td>
+						<a th:href="@{/purchasingForm/update/__${purchasingForm.id}__}" class="btn btn-primary">Edit</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</html>

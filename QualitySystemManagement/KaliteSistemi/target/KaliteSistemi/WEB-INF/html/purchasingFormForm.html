@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org" lang = "tr">
+<th:block th:fragment="content">
+
+    <div class="form-group">
+		<form action="#" th:action="@{/purchasingForm}" th:object="${purchasingForm}"
+			method="post" acceptcharset="UTF-8">
+			<div class="col-md-3">
+				<p>
+					<b>Bölüm Adı:</b><input type="text" class="form-control" placeholder="DepartmentName"
+						th:field="*{DepartmentName}" th:value="*{DepartmentName}" />
+				</p>
+				<p>
+					<b>Tarih:</b><input type="date" class="form-control" placeholder="Date"
+						th:field="*{Date}" th:value="*{Date}"/>
+				</p>
+				<p>
+					<b>Stok Sayısı:</b><input type="number" class="form-control" placeholder="AmountOfStock"
+						th:field="*{AmountOfStock}" th:value="*{AmountOfStock}"/>
+				</p>
+		
+				<input type="submit" class="btn btn-primary" value="Submit" /> <input
+					type="reset" class="btn btn-primary" value="Reset" />
+			</div>
+		</form>
+	</div>
+
+</th:block>
